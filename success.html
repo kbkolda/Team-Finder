@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter some text in the fields below, then press the "Submit form" button to submit the form.</p>
+
+<form action="queue.php" name="queue-form" id="queue-form" method="POST">
+					<label for="hero">Hero</label><br>
+					<input type="text" id="hero" name="hero"><br>
+					<label for="sr">Current Sr</label><br>
+					<input type="int" id="sr" name="sr"><br>
+					<label for="platform">Platform</label><br>
+					<input type="text" id="platform" name="platform"><br>
+  <input type="button" name="queue-form" onclick="submit()" id="queue-form" value="Queue">
+</form>
+
+<script>
+function myFunction() {
+    document.getElementById("queue-form").submit();
+}
+</script>
+
+</body>
+</html>

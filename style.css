@@ -1,0 +1,551 @@
+@font-face { font-family: "Overwatch"; src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff") format('woff'); }
+html{
+	height:100%;
+	width: 100%;
+	background: linear-gradient(to top, #000000, transparent), url('images/background2.jpg') no-repeat center; 
+	background-size: cover; 
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+nav {
+	border-radius: 5px;
+    background-color: #43484c;
+    overflow: hidden;
+}
+
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul li:first-child {
+	margin-right:auto;
+}
+
+nav ul li a {
+	float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+
+nav a:hover {
+    background-color: #000000;
+    color: #f99e1a;
+}
+
+
+nav a.active {
+    background-color: #000000;
+    color: #f99e1a;
+}
+
+.list {
+	position: relative;
+    overflow:hidden;
+	margin-top: 150px;
+	margin-left: 400px;
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+	font-size: 38px;
+	color: #f2f2f2;
+}
+
+.list ul{
+	padding-left: 0;
+}
+
+.list ul li {
+	font-size: 28px;
+	list-style-position: inside;
+	display: list-item; 
+    list-style-type: circle;
+}
+
+.button input{
+	border-radius: 5px;
+	position: absolute;
+	margin-top: -120px;
+	margin-left: 600px;
+    background-color: #218ffe;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button input[type=text], select {
+	
+	border-radius: 5px;
+}
+.button input[type=submit] {
+    background-color: #218ffe;
+    border: none;
+    color: white;
+	font-family: Overwatch;
+    font-size: 40px;
+}
+
+.button input[type=submit]:hover{
+    background-color: #000000;
+	color: #f99e1a
+}
+
+.sidebar {
+	border-radius: 5px;
+	margin-top: 80px;
+	margin-left : 8px;
+    width: 220px;
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #43484c;
+    overflow-x: hidden; 
+    padding-top: 0px;
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+}
+.sidebar h2{
+	color: white;
+	text-align: center;
+	font-size: 40px;
+}
+.sidebar h3{
+	font-size: 16px;
+	color: white;
+	text-align: center;
+}
+.sidebar a, .attack{
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	color: white;
+	display:block;
+	border: none;
+	background-color: #405275;
+	width:100%;
+	text-align: left;
+	cursor: pointer;
+	outline: none;
+}
+.sidebar a:hover, .attack:hover {
+  color: #f99e1a;
+  background-color: black;
+}
+.profile-sidebar{
+	border-radius: 5px;
+	margin-top: 80px;
+	margin-right: 8px;
+    width: 220px; 
+	height: 130px;
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    right: 0;
+    background-color: #43484c;
+    overflow-x: hidden; 
+    padding-top: 0px;
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+	list-style: none;
+	overflow: hidden;
+	display: inline;
+}
+.profile-sidebar h1{
+	text-align: center;
+	line-height: 0px;
+	padding: 8px;
+	font-size: 16px;
+	color: white;
+}
+.profile-sidebar h2{
+	color: white;
+	font-size: 30px;
+	font-family: Overwatch;
+	position: relative;
+	bottom:8px;
+	left: 100px;
+}
+
+.profile-sidebar img{
+	padding: 8px;
+	height: 40px;
+	width: 40px;
+	border-radius: 15px;
+}
+.character-icon{
+	position: absolute;
+	top: 60px;
+	left: 30px;
+}
+.rank-icon img{
+	position: relative;
+	bottom:70px;
+	left: 145px;
+	height: 25px;
+	width: 25px;
+}
+
+.attack-dropdown{
+	display: none;
+	background-color: #43484c;
+	padding-left: 0px;
+}
+.attack-dropdown a{
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+	background-color: #43484c;
+	font-size: 14px;
+}
+.active {
+  background-color: black;
+  color: #f99e1a;
+}
+.loginform{
+	font-family: Overwatch;
+	font-size: 28px;
+	position: relative;
+	left: 800px;
+	top:150px;
+}
+.loginform form {
+	position: absolute;
+	border-radius: 5px;
+    background-color: #43484c;
+    padding: 20px;
+}
+
+.loginform input[type=text],[type=password]{
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.loginform input[type=submit] {
+    width: 300px;
+	font-family: Overwatch;
+	font-size: 25px;
+    background-color: #218ffe;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+.loginform input[type=submit]:hover {
+    background-color: #000000;
+	color: #f99e1a
+}
+
+.loginform a{
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+	font-size: 13px;
+	color: #218ffe;
+}
+.loginform p{
+	margin: 0;
+	text-align: center;
+	color: white;
+	font-size: 13px;
+	display: inline;
+}
+.agree{
+	font-size:15px;
+	margin: 0;
+	position: relative;
+	line-height: 1.2;
+	text-align: center;
+	display: block;
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+	color: white;
+	padding: 5px;
+}
+
+footer {
+	margin: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+	display: inline;
+}
+
+footer a{
+	text-decoration: none;
+	font-size: 15px;
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+	color: white;
+}
+footer ul{
+	display:inline;
+	list-style:none;
+}
+footer ul li{
+	display:inline;
+	position: relative;
+}
+.media{
+	position: relative;
+	text-align: center;
+}
+.agreements {
+	line-height: 0px;
+	position: relative;
+	left: 712px;
+	margin: 0;
+}
+.agreements a{
+	padding: 10px 30px;
+}
+.agreement{
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 400px;
+}
+.privacy{
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 400px;
+}
+.cookie{
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 400px;
+}
+
+.wrong p{
+
+	float:left;
+	position: relative;
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+	color:red;
+	font-size: 12px;
+}
+
+.wrong-email p{
+	text-align: center;
+	float:right;
+	position: absolute;
+	top: 300px;
+	left: 30px;
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+	color:red;
+	font-size: 12px;
+}
+
+.wrong-password p{
+	float:left;
+	position: relative;
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+	color:red;
+	font-size: 12px;
+}
+
+.queueform{
+font-family: Overwatch;
+font-size: 28px;
+position: relative;
+left: 800px;
+top:50px;
+}
+
+.queueform form {
+	position: relative;
+	width: 390px;
+	border-radius: 5px;
+    background-color: #43484c;
+    padding: 20px;
+
+}
+
+.queueform input[type=text],[type=int]{
+    width: 380px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.queueform button[type=submit] {
+    width: 380px;
+	font-family: Overwatch;
+	font-size: 25px;
+    background-color: #218ffe;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+.queueform button[type=submit]:hover {
+    background-color: #000000;
+	color: #f99e1a
+}
+.queueform h1{
+	font-size: 18px;
+	line-height: 0px;
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+}
+
+.radio-hero img{
+	padding: 2px;
+	height: 40px;
+	width: 40px;
+	border-radius: 15px;
+}
+.radio-hero img:hover{
+	background-color: white;
+}
+
+.radio-hero input{
+	visibility: hidden;
+	position: absolute;
+}
+.radio-hero input:checked + img{
+	background-color: white;
+}
+.radio-platform{
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+	font-size: 20px;
+}
+
+.change-profile{
+font-family: Overwatch;
+font-size: 28px;
+position: relative;
+left: 800px;
+top:50px;
+}
+
+.change-profile form {
+	position: relative;
+	width: 300px;
+	border-radius: 5px;
+    background-color: #43484c;
+    padding: 20px;
+
+}
+
+.change-profile input[type=text],[type=int]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.change-profile button[type=submit] {
+    width: 100%;
+	font-family: Overwatch;
+	font-size: 25px;
+    background-color: #218ffe;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+.change-profile button[type=submit]:hover {
+    background-color: #000000;
+	color: #f99e1a
+}
+.change-profile h1{
+	font-size: 18px;
+	line-height: 0px;
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+}
+
+table{
+	table-layout: fixed;
+	width: 300px;
+	border-collapse: collapse;
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+	border-radius: 10px;
+	background-color: #43484c;
+}
+table img{
+	height: 10px;
+	width: 10px;
+}
+tr{
+	font-family: Overwatch;
+}
+td,th{
+	border: 1px solid black;
+	text-align: left;
+	padding: 10px;
+}
+td{
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+}
+
+.person {
+	position: relative;
+	overflow: hidden;
+	margin-top: 50px;
+	margin-left: 450px;
+	font-family: Futura,Blizzard,Arial,Helvetica,sans-serif;
+	font-size: 18px;
+	color: #f2f2f2;
+	border-radius: 5px;
+}
+
+table.queue-table{
+	table-layout: fixed;
+	width: 1000px;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}
+table tr:first-child td:first-child {
+    border-top-left-radius: 5px;
+}
+table tr:first-child td:last-child {
+    border-top-right-radius: 5px;
+}
+table tr:first-child{
+	font-size: 25px;
+}
+table td:last-child{
+	text-align: center;
+}
+
+
+
+
+
+
+
+	
+
+
